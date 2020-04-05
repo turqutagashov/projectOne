@@ -16,10 +16,25 @@ public class Race {
         Car c3 = new Car("Honda", 33, 275);
         Car c4 = new Car("Ferrari", 7, 260);
 
+        d1.setName("Vallteri Bottas");
+        d1.setNationality("Finnish");
+        d1.setAge(31);
+
+        c1.setCarNumber(77);
+
         c1.carOwner = d1;
         c2.carOwner = d2;
         c3.carOwner = d3;
         c4.carOwner = d4;
+
+        System.out.println("The Drivers:");
+
+        System.out.println("\t" + c1.carOwner.getName() + " - " + c1.carOwner.getTeamName());
+        System.out.println("\t" + c2.carOwner.getName() + " - " + c2.carOwner.getTeamName());
+        System.out.println("\t" + c3.carOwner.getName() + " - " + c3.carOwner.getTeamName());
+        System.out.println("\t" + c4.carOwner.getName() + " - " + c4.carOwner.getTeamName());
+
+        System.out.println("\nThe Race started!!!");
 
         ArrayList<Integer> array = new ArrayList<>();
         array.add(c1.speed);
@@ -29,7 +44,9 @@ public class Race {
 
         Collections.sort(array);
 
-        System.out.println("The Winner of The Race:");
+        System.out.println("...\n...\n...\nThe Race finished!!!");
+
+        System.out.println("\nThe Winner of The Race:");
 
         int maxSpeed = array.get(array.size() - 1);
 
